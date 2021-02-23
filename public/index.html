@@ -33,9 +33,9 @@
     <!-- Top nav bar (fixed) -->
     <nav id="navbar">
       <div class="logo">Tweeter</div>
-      <div class="colBox">
+      <div class="chevronBox">
         <p><strong>Compose</strong> a new tweet</p>
-        <form class="chevron" method="GET" action="#compose"><button id="chevron" type="submit"></button></form>
+        <button id="chevron" type="button"></button>
       </div>
     </nav>
     <header class="user-profile">
@@ -52,7 +52,6 @@
     <main class="container">
       <!--new-tweet form-->
       <section class="new-tweet">
-        <a class="anchor" id="compose"></a>
         <h2>Compose Tweet</h2>
         <form class="tweet-text" method="POST" action="/tweets/">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -106,9 +105,38 @@
               <span class="tweet-age">10 days ago</span><span class="icons">@ # $</span>
             </footer>
         </article>
+        <article class="tweet">
+          <header class="header">
+            <div class="container">
+              <span class="avatar">.,,_('')/''</span><span class="name">Newtown</span>
+            </div>
+            <span class="user">@SirIssac</span>
+          </header>
+          <div class="container message">
+            <p class="tweet-content">If I have seen further it is by watching they Might Be Giants</p>
+          </div>
+          <footer class="footer">
+            <span class="tweet-age">10 days ago</span><span class="icons">@ # $</span>
+          </footer>
+      </article>
+      <article class="tweet">
+        <header class="header">
+          <div class="container">
+            <span class="avatar">.,,_('')/''</span><span class="name">Newtown</span>
+          </div>
+          <span class="user">@SirIssac</span>
+        </header>
+        <div class="container message">
+          <p class="tweet-content">If I have seen further it is by watching they Might Be Giants</p>
+        </div>
+        <footer class="footer">
+          <span class="tweet-age">10 days ago</span><span class="icons">@ # $</span>
+        </footer>
+    </article>
       </section>
     </main>
   <script src="/scripts/composer-char-counter.js"></script>
   <script src="/scripts/jQuerysticky.js"></script>
+  <script src="/scripts/scrollToAnchor.js"></script>
   </body>
 </html>

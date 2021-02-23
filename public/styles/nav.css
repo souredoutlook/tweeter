@@ -30,7 +30,7 @@ nav {
   font-size: xx-large;
 }
 
-.colBox {
+.chevronBox {
  display: flex;
  flex-direction: column;
  justify-content: flex-end;
@@ -50,10 +50,4 @@ nav {
 
 #chevron:hover {
   background-image: url("/images/chevron.png");
-}
-
-form.chevron {
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }

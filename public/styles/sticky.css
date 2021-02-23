@@ -1,11 +1,12 @@
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
+  overflow: clip;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
+/* add to header when .sticky gets added to navbar to stop the pop-in*/
+.content {
+  height: 120px;
 }

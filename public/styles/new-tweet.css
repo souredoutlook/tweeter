@@ -39,13 +39,6 @@ form.tweet-text {
   box-shadow: 4px 4px 10px  dimgray;
 }
 
-/*section anchor with offset for fixed header*/
-a.anchor {
-    display: block;
-    position: relative;
-    top: -200px;
-    visibility: hidden;
-}
 /* used to change the font of the output to red*/
 .redNum {
 color: #FF0000;

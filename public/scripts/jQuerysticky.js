@@ -1,10 +1,20 @@
 // fix the navbar when the yOffSet >= navbar.offset.top
 $(document).ready(function() {
   const navBar = $('#navbar');
-  const { top } = navBar.offset() //the offset.top value of #navbar on document ready
+  const navBarTop = navBar.offset().top; //the offset.top value of #navbar on document ready
+
+  const hero = $('#heroBird');
+  const dummyDiv = $('<div>');
+  dummyDiv.addClass('content')
 
   $(window).on('scroll', function() {
-    this.pageYOffset >= top ? navBar.addClass('sticky') : navBar.removeClass('sticky');
+    if(this.pageYOffset >= navBarTop) {
+      navBar.addClass('sticky');
+     dummyDiv.insertAfter(hero);
+    } else {
+      navBar.removeClass('sticky');
+      $('.content').remove();
+    }
   })
   
 });

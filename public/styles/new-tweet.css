@@ -39,3 +39,7 @@ a.anchor {
     top: -200px;
     visibility: hidden;
 }
+/* used to change the font of the output to red*/
+.redNum {
+color: #FF0000;
+}

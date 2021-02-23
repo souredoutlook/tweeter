@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/form.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/sticky.css" type="text/css" />
 
     <!-- External JS -->
@@ -37,7 +38,7 @@
         <form class="chevron" method="GET" action="#compose"><button id="chevron" type="submit"></button></form>
       </div>
     </nav>
-    <header>
+    <header class="user-profile">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -48,28 +49,39 @@
   </header>
   
 
-    <!-- Page-specific (main) content here -->
     <main class="container">
+      <!--new-tweet form-->
       <section class="new-tweet">
         <a class="anchor" id="compose"></a>
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
+        <form class="tweet-text" method="POST" action="/tweets/">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="buttonOutput container">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>      
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
+      </section>
+      <!--existing tweets-->      
+      <section id="tweets">
+        <article class="tweet">
+            <header class="header">
+              <div class="container">
+                <span class="avatar">.,,_('')/''</span><span class="name">Newtown</span>
+              </div>
+              <span class="user">@SirIssac</span>
+            </header>
+            <div class="container message">
+              <p class="tweet-content">If I have seen further it is by watching they Might Be Giants</p>
+            </div>
+            <footer class="footer">
+              <span class="tweet-age">10 days ago</span><span class="icons">@ # $</span>
+            </footer>
+        </article>
+      </section>
     </main>
-    <!--scrolling navbar code-->
+    <!--offset while scrolling navbar script-->
   <script src="/scripts/sticky.js"></script>
+  <script src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>

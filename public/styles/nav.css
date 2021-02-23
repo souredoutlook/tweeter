@@ -46,3 +46,9 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+form.chevron {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

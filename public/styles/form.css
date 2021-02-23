@@ -1,0 +1,40 @@
+form {
+  width: 100%;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonOutput {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee';
+  font-size: large;
+}
+
+#tweet-text {
+    border-width: 0px 0px 2px;
+    background: transparent;
+    border-color: black;
+    width: 100%;
+    resize: none;
+}
+
+button {
+  border: 0px;
+  background-color: #4056A1;
+  color: white;
+  
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -200px;
+    visibility: hidden;
+}

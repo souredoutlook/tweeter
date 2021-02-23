@@ -1,4 +1,4 @@
-form {
+form.tweet-text {
   width: 100%;
 }
 
@@ -17,6 +17,7 @@ form {
   font-size: large;
 }
 
+/*styled form for submitting tweet*/
 #tweet-text {
     border-width: 0px 0px 2px;
     background: transparent;
@@ -25,13 +26,13 @@ form {
     resize: none;
 }
 
+/*Styled button for compose tweet section*/
 button {
   border: 0px;
   background-color: #4056A1;
   color: white;
-  
 }
-
+/*section anchor with offset for fixed header*/
 a.anchor {
     display: block;
     position: relative;

@@ -27,11 +27,18 @@ form.tweet-text {
 }
 
 /*Styled button for compose tweet section*/
-button {
+.submitTweet {
   border: 0px;
   background-color: #4056A1;
   color: white;
 }
+
+.submitTweet:hover {
+  color: #4056A1;
+  background-color: white;
+  box-shadow: 4px 4px 10px  dimgray;
+}
+
 /*section anchor with offset for fixed header*/
 a.anchor {
     display: block;

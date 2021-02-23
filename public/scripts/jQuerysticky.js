@@ -7,13 +7,17 @@ $(document).ready(function() {
   const dummyDiv = $('<div>');
   dummyDiv.addClass('content')
 
+  let stuck;
+  
   $(window).on('scroll', function() {
-    if(this.pageYOffset >= navBarTop) {
+    if(this.pageYOffset >= navBarTop && stuck === false) {
       navBar.addClass('sticky');
-     dummyDiv.insertAfter(hero);
-    } else {
+      dummyDiv.insertAfter(hero);
+      stuck = true;
+    } else if (this.pageYOffset < navBarTop) {
       navBar.removeClass('sticky');
       $('.content').remove();
+      stuck = false;
     }
   })
   

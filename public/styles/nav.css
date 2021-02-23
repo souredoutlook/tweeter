@@ -47,6 +47,10 @@ nav {
   background-size: cover;
 }
 
+#chevron:hover {
+  background-image: url("/images/chevron.png");
+}
+
 form.chevron {
   width: 100%;
   display: flex;

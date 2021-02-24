@@ -1,4 +1,4 @@
-form.tweet-text {
+.tweet-text {
   width: 100%;
 }
 
@@ -23,6 +23,7 @@ form.tweet-text {
     background: transparent;
     border-color: black;
     width: 100%;
+    height: 82px;
     resize: none;
 }
 

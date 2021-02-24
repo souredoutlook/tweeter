@@ -5,19 +5,16 @@ $(document).ready(function() {
 
   const hero = $('#heroBird');
   const dummyDiv = $('<div>');
-  dummyDiv.addClass('content')
+  dummyDiv.addClass('content') 
 
-  let stuck;
   
   $(window).on('scroll', function() {
-    if(this.pageYOffset >= navBarTop && stuck === false) {
+    if(this.pageYOffset >= navBarTop && navBar.hasClass('sticky') === false) {
       navBar.addClass('sticky');
-      dummyDiv.insertAfter(hero);
-      stuck = true;
+      dummyDiv.insertAfter(hero); //add a spacer after hero so that the fixed header does not hide the user profile
     } else if (this.pageYOffset < navBarTop) {
       navBar.removeClass('sticky');
-      $('.content').remove();
-      stuck = false;
+      $('.content').remove(); // remove the dummyDiv spacer if the user scrolls all the back back to the hero
     }
   })
   

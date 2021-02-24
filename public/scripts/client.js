@@ -83,5 +83,20 @@ const renderTweets = function(db) {
 }
 
 $(document).ready(function() {
+  const $form = $('.tweet-text');
+
+  $form.on('submit', function (event) {
+    event.preventDefault(); //prevent form submission using default http
+
+    console.log('Form submitted, performing ajax call...');
+    $.ajax({ method: 'POST', url: '/tweets/', data: $(this).serialize()})
+    .then(function (event) {
+      console.log('Success!')
+    });
+    const $textArea = $(this).find('#tweet-text');
+    $textArea.val('');
+    $('.tweet').remove();
+    renderTweets(tweetDB)
+  });
   renderTweets(tweetDB)
 });

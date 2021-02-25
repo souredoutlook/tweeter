@@ -26,7 +26,7 @@ const convertHowLongAgo = function(initialDate) {
     }
   };
 
-  const milliseconds = Date.now - initialDate //get the time between initialDate and Date.now in milliseconds
+  const milliseconds = Date.now() - initialDate //get the time between initialDate and Date.now in milliseconds
   const result = divide(milliseconds, 0);
   return `${result.iteration > 0 ? Math.floor(result.num) : result.num} ${Math.floor(result.num) > 1 ? extensions[result.iteration] + 's' : extensions[result.iteration]} ago`;
 };
@@ -80,7 +80,7 @@ const postTweet = ($textArea)=> {
 
     $textArea.val(''); //reset textArea
 
-    const $characterCounter = $($textArea).next().children().filter('output');
+    const $characterCounter = $($textArea).parent().find('output');
     $characterCounter.val(140); //reset characterCounter
 
     loadTweets();
@@ -101,15 +101,19 @@ const loadTweets = function() {
 };
 
 const validateTweet = function($textArea) {
-  const $characterCounter = $($textArea).next().children().filter('output');
+  const $characterCounter = $($textArea).parent().find('output');
+  const $errorMessage = $('#error-message');
 
   if ($characterCounter.val() < 0) {
-    alert('You know... our competitor would let you post this.')
+    $errorMessage.html("This tweet is too long to post!");
+    $errorMessage.slideDown("slow");
     return false;
   } else if (!$textArea.val()) {
-    alert('This is a falsey value and you ought to know that!')
+    $errorMessage.html("This tweet needs content before we can post it!");
+    $errorMessage.slideDown("slow");
     return false;
   } else {
+    $errorMessage.hide();
     return true;
   }
 };

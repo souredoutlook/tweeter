@@ -7,6 +7,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .buttonOutput {
@@ -43,4 +45,12 @@
 /* used to change the font of the output to red*/
 .redNum {
 color: #FF0000;
+}
+
+/* style for the error message */
+#error-message {
+  color: #ff0000;
+  background: #ffeeee;
+  margin-bottom: 2px;
+  display: none;
 }

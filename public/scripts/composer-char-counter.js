@@ -4,7 +4,7 @@ $(document).ready(function() {
   
   $('#tweet-text').on('keyup', function() {
     const message = $(this).val();
-    const output = $(this).next().children().filter('output');
+    const output = $(this).parent().find('output');
     output.val(140 - message.length);
     if (output.val() <= 0) {
       output.addClass("redNum"); 

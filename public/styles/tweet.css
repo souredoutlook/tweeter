@@ -14,6 +14,18 @@ padding: 5px;
   color: black;
 }
 
+.fa-flag:hover{
+  color: #4056A1;
+}
+
+.fa-retweet:hover{
+  color: #4056A1;
+}
+
+.fa-heart:hover{
+  color: #4056A1;
+}
+
 .header {
   display: flex;
   flex-direction: row;

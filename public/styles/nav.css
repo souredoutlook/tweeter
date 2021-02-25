@@ -1,17 +1,4 @@
-#heroBird {
-  color: #FFFFFF;
-  background-color: #f4f1ec;
-  background-image: url("/images/bird2.jpg");
-  height: 360px;
-  width: 100%;
-  background-position: center; 
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
- }
-
+/*stylesheet for nav element*/
 nav {
   color: #FFFFFF;
   font-size: medium;
@@ -30,7 +17,7 @@ nav {
   font-size: xx-large;
 }
 
-.navCol {
+.button-column {
  display: flex;
  flex-direction: column;
  justify-content: flex-end;
@@ -44,10 +31,10 @@ nav {
 }
 
 #chevron:hover {
-  text-shadow: 4px 4px 10px  black;
+  text-shadow: 0.25em 0.25em 0.66em  black;
 }
 
-.chevron {
+.chevron-img {
   background-image: url("/images/chevronRed.png");
   background-position: center; 
   background-repeat: no-repeat;
@@ -56,6 +43,6 @@ nav {
   width: 1.5em;
 }
 
-#chevron:hover .chevron{
-  background-image: url("/images/chevron.png");;
+#chevron:hover .chevron-img{
+  background-image: url("/images/chevron.png");
 }

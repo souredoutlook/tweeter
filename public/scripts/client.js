@@ -28,25 +28,27 @@ const convertHowLongAgo = function(initialDate) {
 
   const milliseconds = Date.now() - initialDate //get the time between initialDate and Date.now in milliseconds
   const result = divide(milliseconds, 0);
+
+  //logic below to support naked milliseconds vs. rounded seconds, etc as well as singular to plural conversion on return
   return `${result.iteration > 0 ? Math.floor(result.num) : result.num} ${Math.floor(result.num) > 1 ? extensions[result.iteration] + 's' : extensions[result.iteration]} ago`;
 };
 
-  
+
 const createTweetElement = function(data) {
     return $(`<article class="tweet">
-    <header class="header">
-      <div class="headerLeft">
-        <img class="avatar" src="${data.user.avatars}"><span class="name">${data.user.name}</span>
-      </div>
-      <span class="user">${data.user.handle}</span>
-    </header>
-    <div class="container message">
-      <p class="tweet-content">${data.content.text}</p>
-    </div>
-    <footer class="footer">
-      <span class="tweet-age">${convertHowLongAgo(data.created_at)}</span><span class="icons"><span class="fas fa-flag"></span><span class="fas fa-retweet"></span><span class="fas fa-heart"></span></span>
-    </footer>
-  </article>`);
+                <header class="header">
+                  <div class="headerLeft">
+                    <img class="avatar" src="${data.user.avatars}"><span class="name">${data.user.name}</span>
+                  </div>
+                  <span class="user">${data.user.handle}</span>
+                </header>
+                <div class="container message">
+                  <p class="tweet-content">${data.content.text}</p>
+                </div>
+                <footer class="footer">
+                  <span class="tweet-age">${convertHowLongAgo(data.created_at)}</span><span class="icons"><span class="fas fa-flag"></span><span class="fas fa-retweet"></span><span class="fas fa-heart"></span></span>
+                </footer>
+              </article>`);
 };
 
 const renderTweets = function(db) {
@@ -72,7 +74,7 @@ const postTweet = ($textArea)=> {
     name: 'Nicholas Meisenheimer',
     handle: '@Umami_Outlook',
     avatars: 'https://i.imgur.com/ilT4JDe.png'
-  }
+  } // personalized user field to avoid random user assignment server-side
   
   $.ajax({ method: 'POST', url: '/tweets/', data: { text, user } })
   .done(function () {

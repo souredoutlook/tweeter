@@ -3,28 +3,17 @@
 display: flex;
 flex-direction: column;
 align-items: center;
-border: 2px solid black;
+border: 0.15em solid black;
 margin-top: 1em;
 margin-bottom: 1em;
-padding: 5px;
+padding: 0.3em;
 }
 
 .tweet:hover{
-  box-shadow: 4px 4px 10px  dimgray;
+  box-shadow: 0.25em 0.25em 0.66em  dimgray;
   color: black;
 }
 
-.fa-flag:hover{
-  color: #4056A1;
-}
-
-.fa-retweet:hover{
-  color: #4056A1;
-}
-
-.fa-heart:hover{
-  color: #4056A1;
-}
 
 .header {
   display: flex;
@@ -42,11 +31,11 @@ padding: 5px;
 }
 
 .message {
-    border: solid black;
-    border-width: 0px 0px 2px 0px;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
+  border: solid black;
+  border-width: 0 0 0.15em 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .tweet-content {
@@ -62,5 +51,18 @@ padding: 5px;
 }
 
 .fas {
-  margin: 5px;
+  margin: 0.3em;
+}
+
+/* '.fa*' classes come from font-awesome */
+.fa-flag:hover{
+  color: #4056A1;
+}
+
+.fa-retweet:hover{
+  color: #4056A1;
+}
+
+.fa-heart:hover{
+  color: #4056A1;
 }

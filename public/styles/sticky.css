@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-/* add to header when .sticky gets added to navbar to stop the pop-in*/
-.content {
+/* add to $spacerDiv when .sticky gets added to navbar to stop the pop-in*/
+.spacer {
   height: 120px;
 }

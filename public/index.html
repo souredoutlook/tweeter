@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -22,66 +24,80 @@
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/e22e07bb86.js" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/fixedBehaviour.js"></script>
+    <script type="text/javascript" src="/scripts/scrollToAnchor.js"></script>
+
   </head>
+
   <body>
 
     <!--Hero-->
-    <div id="heroBird">
+    <div id="hero">
       <span>Feed birds, not trolls.</span>
     </div>
     
     <!-- Nav bar -->
     <nav id="navbar" class="nav">
       <div class="logo">Tweeter</div>
-      <div class="navCol">
-        <button id="chevron" type="button" class="navCol">
+      <div>
+        <button id="chevron" type="button" class="button-column">
           <p><strong>Compose</strong> a new tweet</p>
-          <div class="chevron"></div>
+          <div class="chevron-img"></div>
         </button>
       </div> 
     </nav>
     
-    <!--User profile-->
-    <header class="user-profile">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Umami_Outlook</h2>
-      </div>
-  </header>
-  
+    <!--Page Content Container-->
+    <div class="content">
 
-    <main class="container">
-      <!--new-tweet form-->
-      <section class="new-tweet">
-        <form class="tweet-text" method="POST" action="/tweets/">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div id="error-message">Placeholder error message</div>
-          <div class="buttonOutput container">
-            <button class="submitTweet" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <!--existing tweets-->      
-      <section id="tweets">
-      </section>
-    </main>
+      <!--user profile-->
+      <header class="user-profile">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <h2>Umami_Outlook</h2>
+        </div>
+    </header>
+    
+  
+      <main class="container">
+
+        <!--tweet composition form-->
+        <section class="new-tweet">
+          <form class="tweet-text" method="POST" action="/tweets/">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div id="error-message">Placeholder error message</div>
+            <div class="buttonOutput container">
+              <button class="submitTweet" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+
+        <!--Tweets will load below-->      
+        <section id="tweets">
+        </section>
+
+      </main>
+    </div>
+
+    <!--fixed footer-->
     <footer class="fixedFoot">
       <div class="round" id="chevronUp">
-        <div class="chevronUp">
+        <div class="chevronUp-img">
         </div>
       </div>
     </footer>
-  <script src="/scripts/composer-char-counter.js"></script>
-  <script src="/scripts/fixedBehaviour.js"></script>
-  <script src="/scripts/scrollToAnchor.js"></script>
+
   </body>
+
 </html>

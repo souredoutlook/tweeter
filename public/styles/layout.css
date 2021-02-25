@@ -1,3 +1,5 @@
+/*general layout stylesheet*/
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -10,9 +12,23 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+/* Mobile Layout */
+
+ #hero {
+  color: #FFFFFF;
+  background-color: #f4f1ec;
+  background-image: url("/images/bird2.jpg");
+  height: 360px;
+  width: 100%;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+  padding-left: 0.5em;
+ }
 
 body {
   color: #545149;
@@ -21,14 +37,33 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content:  center;
   align-items: center;
+  width: 100%;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   width: 90%;
+  justify-content: start;
+  align-items: center;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+/* Desktop Layout */
+
+@media only screen and (min-width: 1024px) {
+  .content {
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+  }
+}
 
   

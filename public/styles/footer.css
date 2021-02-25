@@ -13,7 +13,7 @@
   border-radius: 50%;
   display: none;
 }
-.chevronUp {
+.chevronUp-img {
   background: inherit;
   background-image: url("/images/chevronRed.png");
   background-position: center; 

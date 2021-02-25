@@ -23,4 +23,11 @@ $(document).ready(function() {
       }) 
   })
 
+  $('#chevronUp').on("click", function(){
+
+    // scroll to that location with an offset of 120 for the navbar
+    $("html, body").animate( 
+      { scrollTop: composeTop - 120 }, 500)
+  })
+
 });

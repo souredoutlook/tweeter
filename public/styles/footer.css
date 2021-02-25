@@ -1,0 +1,30 @@
+.fixedFoot {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.round {
+  background: #4056A1;
+  border-radius: 50%;
+  display: none;
+}
+.chevronUp {
+  background: inherit;
+  background-image: url("/images/chevronRed.png");
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(180deg);
+  height: 1.5em;
+  width: 1.5em;
+  margin: 0.5em;
+}
+
+.round:hover .chevronUp {
+  background-image: url("/images/chevron.png");
+}

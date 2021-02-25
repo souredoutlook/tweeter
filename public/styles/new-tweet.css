@@ -1,5 +1,6 @@
 .tweet-text {
   width: 100%;
+  display: none;
 }
 
 .new-tweet {
@@ -32,6 +33,7 @@
 /*Styled button for compose tweet section*/
 .submitTweet {
   border: 0px;
+  border-radius: 0.25em;
   background-color: #4056A1;
   color: white;
 }

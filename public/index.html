@@ -28,18 +28,24 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
   <body>
+
     <!--Hero-->
     <div id="heroBird">
       <span>Feed birds, not trolls.</span>
     </div>
-    <!-- Top nav bar (fixed) -->
-    <nav id="navbar">
+    
+    <!-- Nav bar -->
+    <nav id="navbar" class="nav">
       <div class="logo">Tweeter</div>
-      <div class="chevronBox">
-        <p><strong>Compose</strong> a new tweet</p>
-        <button id="chevron" type="button"></button>
-      </div>
+      <div class="navCol">
+        <button id="chevron" type="button" class="navCol">
+          <p><strong>Compose</strong> a new tweet</p>
+          <div class="chevron"></div>
+        </button>
+      </div> 
     </nav>
+    
+    <!--User profile-->
     <header class="user-profile">
       <div>
           <img src="/images/profile-hex.png"> 

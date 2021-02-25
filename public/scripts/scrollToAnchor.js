@@ -28,6 +28,17 @@ $(document).ready(function() {
     // scroll to that location with an offset of 120 for the navbar
     $("html, body").animate( 
       { scrollTop: composeTop - 120 }, 500)
-  })
+      .promise()
+      .done(function(){
+        const $form = $compose.find('form');
+        if ($form.css('display') === 'none'){
+          $form.slideDown();
+          $compose.find('textarea').focus();  
+        } else {
+          $form.slideUp();
+        }
+        
+      }) 
+    })
 
 });

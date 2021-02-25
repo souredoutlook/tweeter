@@ -19,12 +19,16 @@ $(document).ready(function() {
     } else if (this.pageYOffset < navBarTop) {
       $navBar.removeClass('sticky');
       $('.content').remove(); // remove the $spacerDiv spacer if the user scrolls all the back back to the hero
+      $compose.find('form').slideUp('fast'); //hide the compose drawer when user navigates away
     }
 
     if(this.pageYOffset + 120 > $compose.offset().top && $chevronUp.css('display') === 'none') {
       $chevronUp.show();
+      $navBar.find('#chevron').hide()
+      $compose.find('form').slideUp('fast'); //hide the compose drawer when user navigates away
     } else if (this.pageYOffset + 120 <= $compose.offset().top) {
       $chevronUp.hide();
+      $navBar.find('#chevron').show()
     }
 
   })

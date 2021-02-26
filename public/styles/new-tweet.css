@@ -1,8 +1,4 @@
-.tweet-text {
-  width: 100%;
-  display: none;
-}
-
+/*styles for the tweet composition element*/
 .new-tweet {
   display: flex;
   flex-direction: column;
@@ -12,15 +8,13 @@
   padding-bottom: 1em;
 }
 
-.buttonOutput {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-family: 'Bungee';
-  font-size: large;
+/*form*/
+.tweet-text {
+  width: 100%;
+  display: none;
 }
 
-/*styled form for submitting tweet*/
+/*text area*/
 #tweet-text {
     border-width: 0 0 0.15em;
     background: transparent;
@@ -30,32 +24,42 @@
     resize: none;
 }
 
-/*Styled button for compose tweet section*/
-.submitTweet {
-  border: 0;
-  border-radius: 0.25em;
-  background-color: #4056A1;
-  color: white;
-}
-
-.submitTweet:hover {
-  color: #4056A1;
-  background-color: white;
-  box-shadow: 0.25em 0.25em 0.66em  dimgray;
-}
-
-/* used to change the font of the output to red*/
-.redNum {
-color: #FF0000;
-}
-
-/* style for the error message */
+/* error message */
 #error-message {
   color: #ff0000;
   background: #ffeeee;
   margin-bottom: 0.15em;
   display: none;
 }
+
+.actions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee';
+  font-size: large;
+}
+
+
+/*Styled button for compose tweet section*/
+.submit-tweet {
+  border: 0;
+  border-radius: 0.25em;
+  background-color: #4056A1;
+  color: white;
+}
+
+.submit-tweet:hover {
+  color: #4056A1;
+  background-color: white;
+  box-shadow: 0.25em 0.25em 0.66em  dimgray;
+}
+
+/* used to change the font of the output to red*/
+.red-num {
+color: #FF0000;
+}
+
 
 @media only screen and (min-width: 1024px) {
   .new-tweet {

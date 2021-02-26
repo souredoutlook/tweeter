@@ -1,3 +1,5 @@
+/* user profile styles */
+
 .user-profile {
   width: 100%;
   display: flex;
@@ -9,7 +11,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: burlywood ;
+  margin: 0;
 }
+
+
+/*Desktop Layout*/
 
 @media only screen and (min-width: 1024px) {
   .user-profile {

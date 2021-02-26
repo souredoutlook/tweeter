@@ -1,4 +1,6 @@
-.fixedFoot {
+/* styles for the fixed footer*/
+
+.fixed-foot {
     width: 100%;
     background: transparent;
     display: flex;

@@ -3,7 +3,7 @@
 display: flex;
 flex-direction: column;
 align-items: center;
-border: 0.15em solid black;
+border: 0.15em solid dimgray;
 margin-top: 1em;
 margin-bottom: 1em;
 padding: 0.3em;
@@ -11,6 +11,7 @@ padding: 0.3em;
 
 .tweet:hover{
   box-shadow: 0.25em 0.25em 0.66em  dimgray;
+  border-color: black;
   color: black;
 }
 
@@ -31,11 +32,15 @@ padding: 0.3em;
 }
 
 .message {
-  border: solid black;
+  border: solid dimgray;
   border-width: 0 0 0.15em 0;
   width: 100%;
   display: flex;
   align-items: flex-end;
+}
+
+.tweet:hover .message {
+  border-color: black;
 }
 
 .tweet-content {
@@ -57,12 +62,22 @@ padding: 0.3em;
 /* '.fa*' classes come from font-awesome */
 .fa-flag:hover{
   color: #4056A1;
+  text-shadow: 0.15em 0.15em 0.33em dimgray;
 }
 
 .fa-retweet:hover{
   color: #4056A1;
+  text-shadow: 0.15em 0.15em 0.33em dimgray;
 }
 
 .fa-heart:hover{
   color: #4056A1;
+  text-shadow: 0.15em 0.15em 0.33em dimgray;
+}
+
+/*Small smartphone adjustment*/
+@media only screen and (min-width: 480px) {
+  .header {
+    flex-wrap: wrap;
+  }
 }

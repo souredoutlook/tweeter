@@ -118,11 +118,10 @@ const validateTweet = function($textArea) {
     $errorMessage.hide();
     return true;
   }
+
 };
 
-$(document).ready(function() {
-  loadTweets();
-
+const handleTweetSubmission = function() {
   const $form = $('.tweet-text');
 
   $form.on('submit', function (event) {
@@ -133,4 +132,13 @@ $(document).ready(function() {
     if (validateTweet($textArea)) postTweet($textArea);
 
   });
+
+};
+
+$(document).ready(function() {
+  
+  loadTweets();
+
+  handleTweetSubmission();
+  
 });

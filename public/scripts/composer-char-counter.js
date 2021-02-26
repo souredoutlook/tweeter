@@ -8,16 +8,16 @@ const updateCount = function() {
     output.val(140 - message.length);
 
     if (output.val() <= 0) {
-      output.addClass("red-num"); 
-    } else if (output.hasClass("red-num" ) && output.val() > 0) {
+      output.addClass("red-num");
+    } else if (output.hasClass("red-num") && output.val() > 0) {
       output.removeClass("red-num");
     }
-  })
+  });
 
 };
 
 $(document).ready(function() {
   
-  updateCount();  
+  updateCount();
 
 });

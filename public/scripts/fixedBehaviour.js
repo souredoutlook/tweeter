@@ -5,12 +5,12 @@ const stickyNavBarOnScroll = function() {
   const navBarTop = $navBar.offset().top;
 
   //create this element only once on document load
-  const $spacerDiv = $('<div>'); 
-  $spacerDiv.addClass('spacer') 
+  const $spacerDiv = $('<div>');
+  $spacerDiv.addClass('spacer');
 
   $(window).on('scroll', function() {
 
-    const $compose = $('.new-tweet')
+    const $compose = $('.new-tweet');
     const $chevronUp = $('#chevronUp');
     const hero = $('#hero');
 
@@ -24,16 +24,16 @@ const stickyNavBarOnScroll = function() {
       $compose.find('form').slideUp('fast'); //hide the compose drawer when user navigates away
     }
 
-    if(this.pageYOffset + 120 > $compose.offset().top && $chevronUp.css('display') === 'none') {
+    if (this.pageYOffset + 120 > $compose.offset().top && $chevronUp.css('display') === 'none') {
       $chevronUp.show();
-      $navBar.find('#chevron').hide()
+      $navBar.find('#chevron').hide();
       $compose.find('form').slideUp('fast'); //hide the compose drawer when user navigates away
     } else if (this.pageYOffset + 120 <= $compose.offset().top) {
       $chevronUp.hide();
-      $navBar.find('#chevron').show()
+      $navBar.find('#chevron').show();
     }
 
-  })
+  });
 };
 
 $(document).ready(function() {
